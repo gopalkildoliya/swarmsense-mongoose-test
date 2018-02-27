@@ -1,5 +1,4 @@
 {
-  "rpc":{"mqtt":{"enable": false}},
   "mqtt":{
       "server": "<swarmsense_server>",
       "user": "sensor_<sensor_id>",
