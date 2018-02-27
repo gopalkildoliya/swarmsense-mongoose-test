@@ -1,0 +1,24 @@
+author: gopalkildoliya
+description: SwarmSense IoT Platform with Mongoose OS
+arch: esp32
+version: 1.0
+manifest_version: 2017-05-18
+libs_version: ${mos.version}
+modules_version: ${mos.version}
+mongoose_os_version: ${mos.version}
+
+config_schema:
+  - ["rpc.mqtt.enable", false]
+  - ["wifi.sta.enable", true]
+  - ["mqtt.enable", true]
+  - ["swarmsense", "o", {title: "SwarmSense application settings"}]
+  - ["swarmsense.sensor_id", "s", "<sensor_id>", {title: "SwarmSense Sensor ID"}]
+
+tags:
+  - swarmsense
+
+filesystem:
+  - fs
+
+libs:
+  - origin: https://github.com/mongoose-os-libs/js-demo-bundle
