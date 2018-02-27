@@ -33,7 +33,7 @@ MQTT.sub('sensors/' + sensor_id + '/configuration', function(conn, topic, msg) {
 }, null);
 
 // Publish Data every second
-Timer.set(10000 /* 1 sec */, Timer.REPEAT, function() {
+Timer.set(60000, Timer.REPEAT, function() {
     let data = getInfo();
     print(data);
     MQTT.pub('sensors/' + sensor_id + "/values", data);
